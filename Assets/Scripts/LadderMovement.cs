@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class LadderMovement : MonoBehaviour
 {
@@ -7,9 +8,13 @@ public class LadderMovement : MonoBehaviour
     private bool isLadder;
     private bool isClimbing;
 
-    [SerializeField] private Rigidbody2D rb; 
+    [SerializeField] private Rigidbody2D rb;
+    private Animator anim;
 
-
+        private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,7 +23,14 @@ public class LadderMovement : MonoBehaviour
         if (isLadder && Mathf.Abs(Vertical) > 0f)
         {
             isClimbing = true;
+            
         }
+        else 
+        {
+            isClimbing = false;
+        }
+
+        anim.SetBool("IsClimbing", isClimbing);
 
     }
 
