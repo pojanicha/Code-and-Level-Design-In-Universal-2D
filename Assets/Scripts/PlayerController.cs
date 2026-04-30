@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
 
     public int currentItems;
 
+    [SerializeField] private Animator anim;
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = GravityScale;
     }
@@ -35,9 +38,13 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        anim.SetBool("IsWalking", horizontal != 0);
+
+
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
+            anim.SetBool("IsJumping", false);
         }
 
 
@@ -48,11 +55,16 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, doubleJump ? doubleJumpForce : jumpForce);
 
                 doubleJump = !doubleJump;
+                anim.SetBool("IsJumping", true);
             }
         }
 
 
         Flip();
+
+        
+
+
 
     }
 
@@ -65,7 +77,8 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y  * Time.fixedDeltaTime;
         }
-       
+       anim.SetFloat("YVelocity", rb.linearVelocity.y);
+
     }
 
     private bool IsGrounded()
