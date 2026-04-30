@@ -7,12 +7,24 @@ public class Door : MonoBehaviour
 
     [SerializeField] private int requiredItemCount; // จำนวนไอเท็มที่ต้องการเพื่อเปิดประตู
     private Collider2D col;
+    [SerializeField] private float moveSpeed = 0.5f; // ความเร็วในการเคลื่อนที่ของประตู
+    private bool isOpen;
 
     private void Awake()
     {
         //_animator = GetComponent<Animator>();
             col = GetComponent<Collider2D>();
     }
+
+    private void Update()
+    {
+        if (isOpen == true)
+        {
+            transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+        }
+    }
+
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -23,7 +35,9 @@ public class Door : MonoBehaviour
 
         if (playerController != null && playerController.currentItems >= requiredItemCount)
         {
-           col.enabled = false; // ปิดการชนเพื่อให้ผู้เล่นผ่านประตูได้
+            isOpen = true;
+            col.enabled = false; // ปิดการชนเพื่อให้ผู้เล่นผ่านประตูได้
+           
         }
 
 
