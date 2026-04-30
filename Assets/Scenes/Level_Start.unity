@@ -31677,6 +31677,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8782193369887704360, guid: 8eb23964f724ad84eada0c60e547fdf3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2008481840}
+    - target: {fileID: 8782193369887704360, guid: 8eb23964f724ad84eada0c60e547fdf3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782193369887704360, guid: 8eb23964f724ad84eada0c60e547fdf3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782193369887704360, guid: 8eb23964f724ad84eada0c60e547fdf3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9009296573231925750, guid: 8eb23964f724ad84eada0c60e547fdf3, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
