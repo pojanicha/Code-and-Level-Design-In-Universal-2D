@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -21,9 +22,16 @@ public class MenuContrioller : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
+            if (!menuCanvas.activeSelf && PauseController.isPaused)
+            {
+                return;
+            }
+
             menuCanvas.SetActive(!menuCanvas.activeSelf);
+            PauseController.SetPause(menuCanvas.activeSelf);
         }
 
+        
     }
 
    

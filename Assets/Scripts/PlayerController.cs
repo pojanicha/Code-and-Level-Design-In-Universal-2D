@@ -36,6 +36,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseController.isPaused)
+        {
+            rb.linearVelocity = Vector2.zero;
+            anim.SetBool("IsWalking", horizontal != 0);
+            return;
+        }
+
+
+
         horizontal = Input.GetAxisRaw("Horizontal");
 
         anim.SetBool("IsWalking", horizontal != 0);
