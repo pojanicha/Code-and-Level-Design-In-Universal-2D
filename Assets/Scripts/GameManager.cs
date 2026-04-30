@@ -1,15 +1,21 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Unity.VisualScripting.Dependencies.NCalc;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static bool isGameOver;
     public GameObject GameOverScreen;
 
+   
+
     private void Awake()
     {
         isGameOver = false;
     }
+
 
     void Update()
     {
@@ -32,11 +38,15 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SimpleFade.Instance.LoadScene(1);
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SimpleFade.Instance.LoadScene(0);
     }
+
+  
+
+
 }

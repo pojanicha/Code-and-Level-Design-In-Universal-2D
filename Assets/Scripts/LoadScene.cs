@@ -11,8 +11,7 @@ public class LoadScene : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(levelIndexToLoad);
-
+            SimpleFade.Instance.LoadScene(levelIndexToLoad);
 
 
         }
