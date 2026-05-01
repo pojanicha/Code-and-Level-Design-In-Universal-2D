@@ -48,6 +48,7 @@ public class FallingPlatform : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
 
         transform.position = startPos;
+        transform.rotation = Quaternion.identity;
         isFalling = false;
     }
 

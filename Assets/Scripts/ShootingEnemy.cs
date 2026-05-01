@@ -8,6 +8,9 @@ public class ShootingEnemy : MonoBehaviour
 
     private float timer;
     private GameObject player;
+
+    [SerializeField] private float distanceAmout;
+    [SerializeField] private float Fire;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,11 +25,11 @@ public class ShootingEnemy : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
 
-        if (distance <= 7f) // Check if player is within 7 units
+        if (distance <= distanceAmout) // Check if player is within 7 units
         {
             timer += Time.deltaTime;
 
-            if (timer >= 1.5f) // Fire every 1.5 seconds
+            if (timer >= Fire) // Fire every 1.5 seconds
             {
                 timer = 0f; // Reset the timer
                 Shoot();

@@ -27,11 +27,20 @@ using System.Collections.Generic;
         DIalougeManager.Instance.StartDialogue(dialogue);
     }
 
+
+    private bool hasTriggered = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (hasTriggered) return;
+
+
+        if (other.CompareTag("Player"))
         {
+            hasTriggered = true;
             TriggerDialogue();
+            gameObject.SetActive(false);
+          
         }
     }
 

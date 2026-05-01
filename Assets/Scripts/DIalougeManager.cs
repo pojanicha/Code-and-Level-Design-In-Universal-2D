@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using System.Collections;
@@ -44,6 +44,15 @@ public class DIalougeManager : MonoBehaviour
 
         if (playerController != null)
         {
+            Rigidbody2D rb = playerController.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero; // หยุดการเคลื่อนที่ของผู้เล่น
+            }
+
+
+
             playerController.enabled = false;
         }
 

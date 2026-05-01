@@ -165,11 +165,26 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    //Item Collection Code
+    //Item Collection Code 
     public void AddItem()
     {
         currentItems++; // เพิ่มจำนวนไอเท็มเมื่อผู้เล่นเก็บไอเท็ม
         Debug.Log("Current Items: " + currentItems);
+    }
+
+    public bool UseItems(int amount)
+    {
+        if (currentItems >= amount)
+        { 
+            currentItems -= amount;
+            return true;
+        
+        
+        
+        }
+        return false;
+    
+    
     }
 
 

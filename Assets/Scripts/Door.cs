@@ -9,6 +9,8 @@ public class Door : MonoBehaviour
     private Collider2D col;
     [SerializeField] private float moveSpeed = 0.5f; // ความเร็วในการเคลื่อนที่ของประตู
     private bool isOpen;
+    [SerializeField]private float targetY;
+
 
     private void Awake()
     {
@@ -18,9 +20,19 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        if (isOpen == true)
+        if (isOpen)
         {
-            transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+            if (transform.position.y > targetY)
+            {
+                transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+
+            }
+
+            else
+            {
+                isOpen = false; // หยุดการเคลื่อนที่เมื่อประตูถึงตำแหน่งเป้าหมาย
+            }
+
         }
     }
 
@@ -33,7 +45,7 @@ public class Door : MonoBehaviour
         // ตรวจสอบว่าผู้เล่นมีไอเท็มครบตามที่ต้องการหรือไม่
         PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
 
-        if (playerController != null && playerController.currentItems >= requiredItemCount)
+        if (playerController != null && playerController.UseItems(requiredItemCount))
         {
             isOpen = true;
             col.enabled = false; // ปิดการชนเพื่อให้ผู้เล่นผ่านประตูได้
