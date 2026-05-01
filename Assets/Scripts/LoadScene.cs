@@ -14,6 +14,21 @@ public class LoadScene : MonoBehaviour
             SimpleFade.Instance.LoadScene(levelIndexToLoad);
 
 
+            if (SimpleFade.Instance != null)
+            {
+                SimpleFade.Instance.LoadScene(levelIndexToLoad);
+            }
+            else
+            {
+                Debug.LogError("SimpleFade Instance is NULL!");
+            }
+
+
+
+
+
+
+
         }
     }
 
