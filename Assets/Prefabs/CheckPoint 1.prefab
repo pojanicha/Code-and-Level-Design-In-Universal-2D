@@ -152,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
   trigger: {fileID: 2625388878941689349}
+  normalSprite: {fileID: -8708341460942908402, guid: 8b8816f3705c5264a90a7a4633e8e8f2, type: 3}
+  activelSprite: {fileID: -4429073703921908900, guid: 8b8816f3705c5264a90a7a4633e8e8f2, type: 3}
