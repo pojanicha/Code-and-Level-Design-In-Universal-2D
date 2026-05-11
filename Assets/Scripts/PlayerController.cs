@@ -43,13 +43,6 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-
-
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        anim.SetBool("IsWalking", horizontal != 0);
-
-
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
@@ -59,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-           if (IsGrounded() || doubleJump)
+            if (IsGrounded() || doubleJump)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, doubleJump ? doubleJumpForce : jumpForce);
 
@@ -67,13 +60,6 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("IsJumping", true);
             }
         }
-
-
-        Flip();
-
-        
-
-
 
     }
 
@@ -87,6 +73,24 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y  * Time.fixedDeltaTime;
         }
        anim.SetFloat("YVelocity", rb.linearVelocity.y);
+
+
+
+
+
+
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        anim.SetBool("IsWalking", horizontal != 0);
+
+
+        
+
+
+        Flip();
+
+
+
 
     }
 

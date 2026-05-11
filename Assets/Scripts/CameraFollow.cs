@@ -11,12 +11,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform target;
 
 
-    void Start()
-    {
-        
-    }
+ 
 
-    // Update is called once per frame
+
     void LateUpdate()
     {
         Vector3 targetPosition = target.position + offset;

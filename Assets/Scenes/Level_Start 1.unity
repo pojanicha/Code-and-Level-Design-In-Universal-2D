@@ -31450,6 +31450,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4650807049341668188, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
+      propertyPath: targetY
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650807049341668188, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
+      propertyPath: moveSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199058777689811405, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562781686254368588, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
       propertyPath: m_Name
       value: Door
@@ -31457,10 +31469,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8562781686254368588, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1939960131}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
 --- !u!114 &734566047 stripped
 MonoBehaviour:
@@ -31525,6 +31534,14 @@ PrefabInstance:
     - target: {fileID: 4308966230530707424, guid: f1637617ff5743e459f90a2bfef3e457, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846914704672671631, guid: f1637617ff5743e459f90a2bfef3e457, type: 3}
+      propertyPath: Fire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846914704672671631, guid: f1637617ff5743e459f90a2bfef3e457, type: 3}
+      propertyPath: distanceAmout
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7642971474487671032, guid: f1637617ff5743e459f90a2bfef3e457, type: 3}
       propertyPath: m_Name
@@ -38063,38 +38080,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632c38d8255335841873f857a126b057, type: 3}
---- !u!1 &1939960126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8562781686254368588, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
-  m_PrefabInstance: {fileID: 728050104}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1939960131
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939960126}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1945532968
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
 
     private void Awake()
     {
-        //_animator = GetComponent<Animator>();
+        
             col = GetComponent<Collider2D>();
     }
 
@@ -62,19 +62,6 @@ public class Door : MonoBehaviour
         }
 
     }
-
-
-
-
-
-    /*[ContextMenu("Open")]
-    public void Open()
-    {
-
-        _animator.SetTrigger("Open");
-
-    }
-    */
 
 
 
