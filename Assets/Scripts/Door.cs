@@ -5,7 +5,7 @@ public class Door : MonoBehaviour
 {
     private Animator _animator;
 
-    [SerializeField] private int requiredItemCount; // จำนวนไอเท็มที่ต้องการเพื่อเปิดประตู
+    public int requiredItemCount; // จำนวนไอเท็มที่ต้องการเพื่อเปิดประตู
     private Collider2D col;
     [SerializeField] private float moveSpeed = 0.5f; // ความเร็วในการเคลื่อนที่ของประตู
     private bool isOpen;
