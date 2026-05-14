@@ -8,6 +8,8 @@ public class PauseController : MonoBehaviour
     public static void SetPause(bool pause)
     {
         isPaused = pause;
+
+        Time.timeScale = pause ? 0f : 1f;
     }
 
 }

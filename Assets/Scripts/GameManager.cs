@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     public static bool isGameOver;
     public GameObject GameOverScreen;
 
-   
+       
+
 
     private void Awake()
     {
-        isGameOver = false;
+     isGameOver = false;
     }
+
 
 
     void Update()
@@ -31,18 +33,9 @@ public class GameManager : MonoBehaviour
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
-
-    public void Play()
-    {
-        SimpleFade.Instance.LoadScene(1);
-    }
-
     public void MainMenu()
     {
+        PauseController.SetPause(false);
         SimpleFade.Instance.LoadScene(0);
     }
 

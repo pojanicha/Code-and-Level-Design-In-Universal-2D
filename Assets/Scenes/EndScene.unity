@@ -1086,9 +1086,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Final Project GI348 \n2D Level Design & Mechanics\n\nPresented by\n \nPojanicha
-    Soravej  \n1670701356\n\n--------------------------------\n\nProgramming / Level
-    Designer / Artist\n\n---------------------------------\n"
+  m_text: "Final Project GI244\nGame Programming I\n\nPresented by\n \nPojanicha
+    Soravej  \n1670701356\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8dac33f40690cc74ea065b9e3bf9c65a, type: 2}
   m_sharedMaterial: {fileID: -8041603275901454950, guid: 8dac33f40690cc74ea065b9e3bf9c65a, type: 2}
@@ -1154,7 +1153,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1209.7303, w: -1672.7358}
+  m_margin: {x: 0, y: 0, z: -1209.7303, w: -465.9666}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         if (PauseController.isPaused)
         {
-            rb.linearVelocity = Vector2.zero;
+            return;
             anim.SetBool("IsWalking", horizontal != 0);
             return;
         }

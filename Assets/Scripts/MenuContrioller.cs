@@ -20,11 +20,7 @@ public class MenuContrioller : MonoBehaviour
     void Update()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            if (!menuCanvas.activeSelf && PauseController.isPaused)
-            {
-                return;
-            }
+        { 
 
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             PauseController.SetPause(menuCanvas.activeSelf);
