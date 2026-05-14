@@ -30224,7 +30224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a85d3293c01fe43817be29bed50426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  offset: {x: 8, y: 0, z: -10}
+  offset: {x: 0, y: 0, z: -10}
   target: {fileID: 361193333}
 --- !u!114 &300679063
 MonoBehaviour:
@@ -30494,6 +30494,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8581383948655860051, guid: ad8af5f9af61cac4ea04bb34ec4f0295, type: 3}
   m_PrefabInstance: {fileID: 6356868196602134306}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &361193339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9190284115363410284, guid: ad8af5f9af61cac4ea04bb34ec4f0295, type: 3}
+  m_PrefabInstance: {fileID: 6356868196602134306}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd655c0b5535b4469e09bf431ecca9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1001 &375775148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32395,13 +32406,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7402398703698951964, guid: b2ba7e14ac58fcd48b91d21a958ec93d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2ba7e14ac58fcd48b91d21a958ec93d, type: 3}
+--- !u!114 &1087577667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4650807049341668188, guid: 94cbe998509a0e045bf36abbb7700321, type: 3}
+  m_PrefabInstance: {fileID: 728050104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df7a76b412a8e54e8cbfef8fb62b679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
 --- !u!1001 &1100055986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33302,6 +33324,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 880c9a06360c3ab4ca4a7cd6ea76d9ab, type: 3}
+--- !u!1 &1605389800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5672119262590296348, guid: 52f18eb77694eab4ca21648cab0992a0, type: 3}
+  m_PrefabInstance: {fileID: 1957936706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605389805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605389800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c73490dc2e606c409a33d9df6c85c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIItems
+  playerController: {fileID: 361193339}
+  door: {fileID: 1087577667}
 --- !u!4 &1613553831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2590729221318087768, guid: fa2a8627461327b49baae45abcd53128, type: 3}
@@ -38326,7 +38367,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5672119262590296348, guid: 52f18eb77694eab4ca21648cab0992a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1605389805}
   m_SourcePrefab: {fileID: 100100000, guid: 52f18eb77694eab4ca21648cab0992a0, type: 3}
 --- !u!4 &1973106366 stripped
 Transform:
@@ -38852,6 +38896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9190284115363410284, guid: ad8af5f9af61cac4ea04bb34ec4f0295, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38896,6 +38944,7 @@ SceneRoots:
   - {fileID: 1031930684}
   - {fileID: 809346543}
   - {fileID: 1615205010}
+  - {fileID: 6356868196602134306}
   - {fileID: 928691733}
   - {fileID: 850474588}
   - {fileID: 314190259}
@@ -38912,7 +38961,6 @@ SceneRoots:
   - {fileID: 4920834465461562134}
   - {fileID: 26643280}
   - {fileID: 1071341662}
-  - {fileID: 6356868196602134306}
   - {fileID: 875602385}
   - {fileID: 1406122275}
   - {fileID: 427542749}

@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        horizontal = Input.GetAxisRaw("Horizontal");
+
         if (PauseController.isPaused)
         {
             rb.linearVelocity = Vector2.zero;
@@ -77,9 +81,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-
-        horizontal = Input.GetAxisRaw("Horizontal");
 
         anim.SetBool("IsWalking", horizontal != 0);
 
@@ -148,7 +149,9 @@ public class PlayerController : MonoBehaviour
 
     void Respawn()
     {
-        transform.position = RespawnController.Instance.respawnPoint.position;
+        Debug.Log("RESPAWN");
+        rb.linearVelocity = Vector2.zero;
+        rb.position = RespawnController.Instance.respawnPoint.position;
     }
 
     IEnumerator GetHurt()
