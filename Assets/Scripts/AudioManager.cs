@@ -6,6 +6,13 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioSource musicSource;
 
+    public float CurrentVolume
+    {
+        get { return musicSource.volume; }
+    }
+
+
+
     private void Awake()
     {
         if (Instance == null)
